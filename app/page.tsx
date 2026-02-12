@@ -1,12 +1,13 @@
 import connectDB from "@/lib/db";
-import Navbar from "@/modules/home/components/Navbar";
+import Hero from "@/modules/home/components/Hero";
+
 import Image from "next/image";
 
 export default function Home() {
   connectDB();
   return (
     <div>
-      <Navbar />
+      <Hero />
     </div>
   );
 }
