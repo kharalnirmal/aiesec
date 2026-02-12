@@ -6,10 +6,10 @@ const ValueDrivenLeaders = () => {
   return (
     <section className="relative bg-gradient-to-b from-white to-gray-50 px-0 py-12 sm:py-16 md:py-20 overflow-hidden">
       <div className="relative mx-auto w-full">
-        <div className="relative flex flex-row justify-between items-center">
+        <div className="relative flex flex-row items-center">
           {/* LEFT SIDE - Hexagonal Icons */}
-          <div className="relative flex justify-end items-center -ml-12 sm:-ml-8 md:ml-0 w-1/4 sm:w-1/4 md:w-1/4">
-            <div className="relative w-32 sm:w-40 md:w-56 lg:w-64 h-32 sm:h-40 md:h-56 lg:h-64">
+          <div className="relative flex justify-end items-center -ml-12 sm:-ml-8 md:ml-0 w-1/3">
+            <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64">
               <Image
                 src="/partners/side1.webp"
                 alt="Leadership Values"
@@ -20,10 +20,10 @@ const ValueDrivenLeaders = () => {
           </div>
 
           {/* MIDDLE - Content */}
-          <div className="z-10 relative flex flex-1 justify-center items-center px-2 sm:px-4 md:px-8 text-center">
+          <div className="z-10 relative flex justify-center items-center px-2 sm:px-4 md:px-6 w-1/3 text-center">
             {/* Hexagon/Diamond Container - Height matches icons */}
             <div
-              className="relative flex justify-center items-center bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow-lg px-6 sm:px-8 md:px-12 lg:px-16 w-full h-32 sm:h-40 md:h-44 lg:h-50"
+              className="relative flex justify-center items-center bg-gradient-to-r from-blue-50 via-white to-blue-50 shadow-lg px-4 sm:px-6 md:px-8 lg:px-10 w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64"
               style={{
                 clipPath:
                   "polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%)",
@@ -50,8 +50,8 @@ const ValueDrivenLeaders = () => {
           </div>
 
           {/* RIGHT SIDE - Hexagonal Icons */}
-          <div className="relative flex justify-start items-center -mr-12 sm:-mr-8 md:mr-0 w-1/4 sm:w-1/4 md:w-1/4">
-            <div className="relative w-32 sm:w-40 md:w-56 lg:w-64 h-32 sm:h-40 md:h-56 lg:h-64">
+          <div className="relative flex justify-start items-center -mr-12 sm:-mr-8 md:mr-0 w-1/3">
+            <div className="relative w-32 sm:w-40 md:w-48 lg:w-56 xl:w-64 h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64">
               <Image
                 src="/partners/side2.webp"
                 alt="Leadership Qualities"
