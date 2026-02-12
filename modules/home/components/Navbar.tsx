@@ -31,14 +31,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-300   mx-auto ${
         scrolled
           ? "bg-white shadow-xl backdrop-blur-md"
           : "bg-white/70 backdrop-blur-sm"
       }`}
     >
       {/* Main Navbar */}
-      <div className="flex justify-between items-center px-4 md:px-8 h-16">
+      <div className="flex justify-between items-center mx-auto px-4 md:px-8 max-w-7xl h-16">
         {/* Logo */}
         <Link href="/" onClick={closeMobileMenu}>
           <Image

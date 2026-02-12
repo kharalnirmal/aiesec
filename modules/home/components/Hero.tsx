@@ -23,8 +23,8 @@ const Hero = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 min-h-screen">
-      <div className="relative flex md:flex-row flex-col items-stretch gap-3 sm:gap-4">
+    <section className="px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 min-h-[90vh]">
+      <div className="relative flex md:flex-row flex-col items-stretch gap-3 sm:gap-4 mx-auto max-w-7xl">
         {/* LEFT SIDE */}
         <div className="relative shadow-xl rounded-lg w-full md:w-2/3 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] overflow-hidden">
           <Image
@@ -84,7 +84,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,4 +4,10 @@
 
 @theme {
   --color-primary: #037ef3;
+  /* pink */
+  --color-secondary: #f85a40;
+  /* blue */
+  --color-tertiary: #0cb9c1;
+  /* orange */
+  --color-quaternary: #f48924;
 }
