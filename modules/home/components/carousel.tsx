@@ -83,8 +83,8 @@ export function CarouselPlugin() {
       <CarouselContent>
         {testimonials.map((testimonial) => (
           <CarouselItem key={testimonial.id}>
-            <div className="flex items-center gap-8 p-4 w-full">
-              <div className="relative rounded-xl w-1/3 h-64 overflow-hidden">
+            <div className="flex md:flex-row flex-col gap-8 p-4 w-full">
+              <div className="relative rounded-xl w-full md:w-1/3 h-64 overflow-hidden">
                 <Image
                   alt="review"
                   src={testimonial.image}

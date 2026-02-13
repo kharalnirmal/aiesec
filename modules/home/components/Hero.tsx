@@ -1,9 +1,23 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Globe, Handshake, Plane } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import React, { use } from "react";
 
 const Hero = () => {
+  // for animation
+
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "expo.in" } });
+    tl.from(".left", { x: -100, opacity: 0, duration: 0.8 })
+      .from(".right", { y: -100, opacity: 0, duration: 0.8 }, "-=0.3")
+      .from(".bottom", { y: 50, opacity: 0, stagger: 0.8, duration: 0.5 }, "<");
+  }, []);
+
+  //dummy data for stats
   const data = [
     {
       image: <Globe size={35} />,
@@ -26,7 +40,7 @@ const Hero = () => {
     <section className="px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 min-h-[90vh]">
       <div className="relative flex md:flex-row flex-col items-stretch gap-3 sm:gap-4 mx-auto max-w-7xl">
         {/* LEFT SIDE */}
-        <div className="relative shadow-xl rounded-lg w-full md:w-2/3 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] overflow-hidden">
+        <div className="left relative shadow-xl rounded-lg w-full md:w-2/3 min-h-[300px] sm:min-h-[400px] md:min-h-[500px] overflow-hidden">
           <Image
             src="/v1.webp"
             alt="Hero Image"
@@ -50,7 +64,7 @@ const Hero = () => {
         {/* RIGHT SIDE */}
         <div className="flex flex-col gap-3 sm:gap-4 w-full md:w-1/3">
           {/* TOP IMAGE */}
-          <div className="relative flex-2 shadow-lg rounded-2xl min-h-[200px] sm:min-h-[250px] md:min-h-0 overflow-hidden">
+          <div className="right relative flex-2 shadow-lg rounded-2xl min-h-[200px] sm:min-h-[250px] md:min-h-0 overflow-hidden">
             <Image
               src="/5.webp"
               alt="About Us Image"
@@ -60,7 +74,7 @@ const Hero = () => {
           </div>
 
           {/* BOTTOM STATS */}
-          <div className="flex sm:flex-row md:flex-row flex-col flex-1 justify-between items-stretch gap-3 sm:gap-4 bg-gray-300 shadow-lg backdrop-blur-md p-4 sm:p-6 rounded-2xl">
+          <div className="bottom flex sm:flex-row md:flex-row flex-col flex-1 justify-between items-stretch gap-3 sm:gap-4 bg-gray-300 shadow-lg backdrop-blur-md p-4 sm:p-6 rounded-2xl">
             {data.map((item, index) => (
               <div
                 key={index}

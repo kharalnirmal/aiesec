@@ -6,11 +6,17 @@ import { SignUpButton } from "@clerk/nextjs";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+  //animation for Navbar
+  useGSAP(() => {
+    const tl = gsap.timeline({ defaults: { ease: "power1.in" } });
+    tl.from(".nav", { y: -100, opacity: 0, duration: 0.7 });
+  }, []);
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -31,14 +37,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300   mx-auto ${
+      className={` fixed top-0 z-50 w-full transition-all duration-300   mx-auto ${
         scrolled
           ? "bg-white shadow-xl backdrop-blur-md"
           : "bg-white/70 backdrop-blur-sm"
       }`}
     >
       {/* Main Navbar */}
-      <div className="flex justify-between items-center mx-auto px-4 md:px-8 max-w-7xl h-16">
+      <div className="flex justify-between items-center mx-auto px-4 md:px-8 max-w-7xl h-16 nav">
         {/* Logo */}
         <Link href="/" onClick={closeMobileMenu}>
           <Image
